@@ -1,7 +1,17 @@
+let cl = console.log;
+
+cl('helo')
+
+localStorage.setItem('fullName','Mangesh Dhole')
 
 
+let obj = {
+    fname: 'Mangesh',
+    lname: 'Dhole'
+}
 
-let mangesh;
+localStorage.setItem('userObj', JSON.stringify(obj))
 
+let getdatafromlocalstorage = JSON.parse(localStorage.getItem('userObj'))
 
-console.log(mangesh);
+cl(getdatafromlocalstorage)
